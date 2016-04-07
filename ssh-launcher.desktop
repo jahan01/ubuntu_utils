@@ -1,0 +1,27 @@
+[Desktop Entry]
+Version=1.0
+Name=Remote Servers
+Comment=Login to my servers
+Exec=gnome-terminal --disable-factory --sm-client-disable --class=remoteserver
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=utilities-terminal
+StartupNotify=true
+StartupWMClass=RemoteServers
+X-Ayatana-Desktop-Shortcuts=Server1;Server2;Server3;
+
+[Server1 Shortcut Group]
+Name=SSH into ami
+Exec=gnome-terminal --disable-factory --sm-client-disable  --class=remoteserver -x ssh ami
+TargetEnvironment=Unity
+
+[Server2 Shortcut Group]
+Name=SSH into xbmc.local
+Exec=gnome-terminal --disable-factory --sm-client-disable --class=remoteserver -x ssh -t xbmc.local
+TargetEnvironment=Unity
+
+[Server3 Shortcut Group]
+Name=SSH into miggytop.local
+Exec=gnome-terminal --disable-factory --sm-client-disable --class=remoteserver -x ssh -t miggytop.local
+TargetEnvironment=Unity
